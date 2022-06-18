@@ -63,7 +63,6 @@ describe('Lottery Contract', () => {
     const difference = finalBalance - initialBalance;
     const playersAfterPickWinner = await lottery.methods.getPlayers().call({ from: accounts[0] });
     const contractBalanceAfterPickWinner = await web3.eth.getBalance(lottery.options.address);
-    console.log(contractBalanceAfterPickWinner);
     assert(difference > web3.utils.toWei('1.8', 'ether'));
     //Check if the players array is empty after pickWinner
     assert(playersAfterPickWinner.length === 0);
