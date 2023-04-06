@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const provider = new HDWalletProvider({
   mnemonic: process.env.MNEMONIC,
-  providerOrUrl: process.env.POCKET_ENDPOINT
+  providerOrUrl: process.env.INFURA_ENDPOINT
 });
 
 const web3 = new Web3(provider);
